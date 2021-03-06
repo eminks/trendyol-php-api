@@ -254,7 +254,7 @@ Class Request
             throw new TrendyolException("Trendyol boş yanıt döndürdü.");
         }
 
-        $response = json_decode($response);
+        $response = json_decode($response, true);
         curl_close($ch);
         return $response;
     }
